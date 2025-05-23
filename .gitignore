@@ -1,0 +1,7 @@
+*
+
+!.gitignore
+
+!main.c
+!Makefile
+!run_report.sh
