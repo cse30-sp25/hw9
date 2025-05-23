@@ -35,7 +35,7 @@ else
 fi
 gcc -o "$tmp_exe_O0" main.c -O0 -g
 
-valgrind_output=$(valgrind --error-exitcode=42 --tool=helgrind $tmp_exe_O0 4096 1000007 1 2>&1)
+valgrind_output=$(valgrind --error-exitcode=42 --tool=helgrind $tmp_exe_O0 4096 1000007 2>&1)
 valgrind_status=$?
 
 if (( valgrind_status == 0 )); then
@@ -56,7 +56,7 @@ for N in "${Ns[@]}"; do
 
     for i in {1..5}; do
         echo "Experiment ${run_count}/${total_runs}"
-        OUTPUT=$("$tmp_exe" "$N" 1000007 1)
+        OUTPUT=$("$tmp_exe" "$N" 1000007)
         echo "$OUTPUT"
 
         while IFS= read -r line; do
