@@ -38,7 +38,7 @@ void *parallel_work(void *arg) {
 
     int sum = 0;
 
-    //// Compute partial sum of array elements assigned to this thread
+    //// TODO: Compute partial sum of array elements assigned to this thread
     //// partial sum should be taken modulo 'm' in every step
 
     ////
